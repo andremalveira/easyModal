@@ -1,0 +1,117 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+:root {
+  --bg-primary: #22272e;
+  --bg-second: #2d333b;
+  --border:  #768390;
+
+  --font-primary: #adbac7;
+  --font-second: #768390;
+  --font-third: #e5534b;
+
+  --btn-primary:  #373e47;
+  --btn-primary-hover: #444c56;
+}
+* {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg-primary);
+  color: var(--font-second);
+  font-family: system-ui, 'sans-serif';
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.gap0 {
+  gap: 0rem;
+}
+div {
+  text-align: center;
+}
+h1{
+  font-size: 3rem;
+}
+h3 {
+  width: 54%;
+  font-weight: 400;
+  margin: 2rem 0rem 1rem 0rem;
+}
+a {
+  color: #3a8bde;
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  background: var(--btn-primary);
+  color: var(--font-primary);
+  border: solid 1px var(--border);
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+button:hover {
+  background: var(--btn-primary-hover);
+}
+.bi-arrow-down {
+  position: absolute;
+  bottom: 5rem;
+  font-size: 2rem;
+}
+.button-github {
+  margin: 0 0.5rem;
+  display: inline-block;
+  text-align: center;
+  background-color: #1FCA4F;
+  color: white;
+  width: 200px;
+  border-radius: 3px;
+  line-height: 3;
+  text-decoration: none;
+  border-bottom: 4px solid #1aab43;
+  cursor: pointer;
+  transition: ease 0.2s;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+.button-github:hover {
+  background-color: #1ec14c;
+}
+
+@media (max-width: 720px) {
+  html {
+    background: var(--bg-primary);
+    position: relative;
+    height: 100%;
+  }
+  html::before {
+    content: 'Sem suporte para Mobile!';
+    position: absolute;
+    color: var(--font-second);
+    font-family: sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  body {
+    display: none;
+  }
+}

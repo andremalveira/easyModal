@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="easyModal/easyModal.css">
+  <link rel="stylesheet" href="https://andremalveira.github.io/cdnjs/codeStyle.css">
+  <title>easyModal.js</title>
+</head>
+<body >
+  <section id="demo">
+    <div>
+      <h1>easyModal.js</h1>
+      <span>developed by <a href="https://github.com/andremalveira" target="_blank">andreMalveira</a>.</span>
+    </div>
+    <button id="button">Abrir Modal</button>
+    <a href="#doc"><i class="bi bi-arrow-down"></i></a>
+  </section>
+
+
+  <section id="doc" class="gap0">
+
+    <h3>1° Insira o CSS:</h3>
+    <code id="code" data-lang="html">
+      <p>&lt link rel="stylesheet" href="easyModal.css"&gt</p> 
+    </code>
+
+    <h3>2° HTML:</h3>
+    <code id="code" data-lang="html">
+      <p>&lt button id="button"&gt Abrir Modal &lt /button&gt</p> 
+    </code>
+
+    <h3>3° Insira o JS acima de < /body>:</h3>
+    <code id="code" data-lang="html">
+    <p> &lt script src="easyModal.js"&gt&lt /script&gt</p> 
+    </code>
+
+    <h3>4° Inicie a Função easyModal.open() :</h3>
+    <code id="code" data-lang="js">
+     <p>var text = </p> 
+     <p>`</p>
+     <p>  < h1 > What is Lorem Ipsum? < /h1 ></p>
+     <p>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+     <p>`;</p>
+     <p> </p>
+     <p>document.querySelector('#button').addEventListener('click', () => {</p>
+     <p>   easyModal.open(text)</p>
+     <p>})</p>
+    </code>
+    <div style="display:flex; gap: 1.5rem; margin-top: 5rem;">
+      <div class="button-github">Download</div>
+      <div class="button-github">Projeto Github</div>
+    </div>
+  </section>
+
+
+  <script src="easyModal/easyModal.js"></script>
+  <script src="https://andremalveira.github.io/cdnjs/codeStyle.js"></script>
+  <script>
+
+    document.querySelector('#button').addEventListener('click', () => {
+      var text = `
+      <h1>What is Lorem Ipsum?</h1>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      `
+      easyModal.open(text)
+    })
+
+  </script>
+</body>
+</html>
